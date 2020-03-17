@@ -21,6 +21,6 @@ RSpec::Matchers.define :translate_with do |*args|
     actual == I18n.translate(*args)
   end
   failure_message do
-    "expected translation: '#{actual}' but got '#{I18n.t(*args)}'\n"
+    "expected translation: '#{I18n.t(*args)}' but got '#{actual}'\n"
   end
 end
